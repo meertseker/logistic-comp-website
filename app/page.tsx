@@ -61,8 +61,8 @@ export default function Home() {
   return (
     <div className={`min-h-screen ${isMobileMenuOpen ? 'overflow-hidden' : 'bg-white'}`}>
       {/* Header */}
-      <header className="px-4 py-6 lg:px-20 bg-white shadow-sm sticky top-0 z-50">
-        <div className="flex items-center justify-between">
+      <header className="px-4 py-6 lg:px-20 bg-[#202953] shadow-sm sticky top-0 z-50 relative">
+        <div className="flex items-center justify-between relative z-10">
           {/* Logo */}
           <div className="flex items-center">
             <Image
@@ -76,20 +76,20 @@ export default function Home() {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-[#007BFF] font-semibold border-2 border-[#007BFF] px-4 py-2 rounded-full">Anasayfa</a>
-            <a href="#about" className="text-gray-600 font-semibold hover:text-[#007BFF] transition-colors">Hakkımızda</a>
-            <a href="#services" className="text-gray-600 font-semibold hover:text-[#007BFF] transition-colors flex items-center gap-1">
+            <a href="#" className="text-white font-semibold border-2 border-white px-4 py-2 rounded-full">Anasayfa</a>
+            <a href="#about" className="text-white font-semibold hover:text-[#202953] transition-colors">Hakkımızda</a>
+            <a href="#services" className="text-white font-semibold hover:text-[#202953] transition-colors flex items-center gap-1">
               Hizmetlerimiz
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </a>
-            <a href="#gallery" className="text-gray-600 font-semibold hover:text-[#007BFF] transition-colors">Galeri</a>
-            <a href="#contact" className="text-gray-600 font-semibold hover:text-[#007BFF] transition-colors">İletişim</a>
+            <a href="#gallery" className="text-white font-semibold hover:text-[#202953] transition-colors">Galeri</a>
+            <a href="#contact" className="text-white font-semibold hover:text-[#202953] transition-colors">İletişim</a>
           </nav>
           
           {/* CTA Button */}
-          <a href="#contact" className="text-[#007BFF] font-semibold hidden md:block">Teklif Al</a>
+          <a href="#contact" className="text-white font-semibold hidden md:block">Teklif Al</a>
         </div>
       </header>
 
@@ -111,7 +111,7 @@ export default function Home() {
             <div className="space-y-6">
               <h1 className="text-6xl lg:text-[80px] font-bold leading-[90px] text-[#0E0E0E] tracking-tight animate-fade-in-up animate-delay-200">
                 Lojistik Dünyasını{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#1A00E2]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#202953] to-[#1A00E2]">
                   Yükseltiyoruz
                 </span>
               </h1>
@@ -123,9 +123,9 @@ export default function Home() {
             
             {/* Modern CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up animate-delay-600">
-              <a href="#contact" className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#0066FF] to-[#1A00E2] text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+              <a href="#contact" className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#202953] to-[#1A00E2] text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
                 <span className="relative z-10">Teklif Al</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1A00E2] to-[#0066FF] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1A00E2] to-[#202953] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               
               <a href="tel:+902128757983" className="group inline-flex items-center gap-4 px-8 py-4 bg-white border-2 border-[#1A00E2] text-[#1A00E2] font-semibold rounded-full hover:bg-[#1A00E2] hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl animate-fade-in-up animate-delay-800">
@@ -141,15 +141,15 @@ export default function Home() {
             {/* Trust Indicators */}
             <div className="flex items-center gap-8 pt-8 animate-fade-in-up animate-delay-1000">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#28A745] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#66B2B2] rounded-full"></div>
                 <span className="text-sm text-[#63666D] font-medium">15+ Yıl Deneyim</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#28A745] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#66B2B2] rounded-full"></div>
                 <span className="text-sm text-[#63666D] font-medium">500+ Başarılı Proje</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-[#28A745] rounded-full"></div>
+                <div className="w-2 h-2 bg-[#66B2B2] rounded-full"></div>
                 <span className="text-sm text-[#63666D] font-medium">%99 Müşteri Memnuniyeti</span>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function Home() {
                 priority
               />
               {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0066FF]/20 to-[#1A00E2]/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#202953]/20 to-[#1A00E2]/20"></div>
               
               {/* Content overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -187,7 +187,7 @@ export default function Home() {
             {/* Floating Cards */}
             <div className="absolute -top-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-[#28A745] rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#66B2B2] rounded-lg flex items-center justify-center">
                   <Image
                     src="/vercel.svg"
                     alt="Hızlı Teslimat"
@@ -205,7 +205,7 @@ export default function Home() {
             
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-[#FFC107] rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#FFA07A] rounded-lg flex items-center justify-center">
                   <Image
                     src="/file.svg"
                     alt="Güvenli Taşıma"
@@ -222,8 +222,8 @@ export default function Home() {
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute top-1/4 -right-8 w-24 h-24 bg-gradient-to-br from-[#0066FF] to-[#1A00E2] rounded-full opacity-20 animate-pulse"></div>
-            <div className="absolute bottom-1/4 -left-8 w-32 h-32 bg-gradient-to-br from-[#28A745] to-[#1A00E2] rounded-full opacity-15"></div>
+            <div className="absolute top-1/4 -right-8 w-24 h-24 bg-gradient-to-br from-[#202953] to-[#1A00E2] rounded-full opacity-20 animate-pulse"></div>
+            <div className="absolute bottom-1/4 -left-8 w-32 h-32 bg-gradient-to-br from-[#66B2B2] to-[#1A00E2] rounded-full opacity-15"></div>
           </div>
         </div>
       </section>
@@ -233,8 +233,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#E3F2FD] text-[#007BFF] px-4 py-2 rounded-lg mb-6">
-              <div className="w-2 h-2 bg-[#007BFF] rounded-full"></div>
+            <div className="inline-flex items-center gap-2 bg-[#E3F2FD] text-[#202953] px-4 py-2 rounded-lg mb-6">
+              <div className="w-2 h-2 bg-[#202953] rounded-full"></div>
               <span className="font-semibold text-[15px]">Hizmetlerimiz</span>
             </div>
             <h2 className="text-4xl lg:text-[44px] font-semibold text-[#0E0E0E] mb-6 leading-[53px] tracking-[-1px]">
@@ -253,9 +253,9 @@ export default function Home() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#007BFF]/80 to-[#0056B3]/80 group-hover:from-[#0056B3]/80 group-hover:to-[#007BFF]/80 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#202953]/80 to-[#1A232B]/80 group-hover:from-[#1A232B]/80 group-hover:to-[#202953]/80 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-[#007BFF]" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-8 h-8 text-[#202953]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z" />
                   </svg>
                 </div>
@@ -268,9 +268,9 @@ export default function Home() {
                 <p className="text-[#63666D] mb-4 text-[15px] leading-[21px]">
                   İhracat süreçlerinizde güvenilir ve hızlı konteyner taşımacılığı hizmeti.
                 </p>
-                <a href="#contact" className="text-[#007BFF] font-semibold flex items-center gap-2 group">
+                <a href="#contact" className="text-[#202953] font-semibold flex items-center gap-2 group">
                   Detaylar
-                  <div className="w-16 h-0.5 bg-blue-200 group-hover:bg-[#007BFF] transition-colors"></div>
+                  <div className="w-16 h-0.5 bg-blue-200 group-hover:bg-[#202953] transition-colors"></div>
                 </a>
               </div>
             </div>
@@ -284,9 +284,9 @@ export default function Home() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#28A745]/80 to-[#1E7E34]/80 group-hover:from-[#1E7E34]/80 group-hover:to-[#28A745]/80 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#66B2B2]/80 to-[#4682B4]/80 group-hover:from-[#4682B4]/80 group-hover:to-[#66B2B2]/80 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-[#28A745]" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-8 h-8 text-[#66B2B2]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
                     <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z" />
                   </svg>
@@ -300,9 +300,9 @@ export default function Home() {
                 <p className="text-[#63666D] mb-4 text-[15px] leading-[21px]">
                   İthalat süreçlerinizde profesyonel konteyner taşımacılığı çözümleri.
                 </p>
-                <a href="#contact" className="text-[#28A745] font-semibold flex items-center gap-2 group">
+                <a href="#contact" className="text-[#66B2B2] font-semibold flex items-center gap-2 group">
                   Detaylar
-                  <div className="w-16 h-0.5 bg-green-200 group-hover:bg-[#28A745] transition-colors"></div>
+                  <div className="w-16 h-0.5 bg-green-200 group-hover:bg-[#66B2B2] transition-colors"></div>
                 </a>
               </div>
             </div>
@@ -316,9 +316,9 @@ export default function Home() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#FFC107]/80 to-[#E0A800]/80 group-hover:from-[#E0A800]/80 group-hover:to-[#FFC107]/80 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#FFA07A]/80 to-[#CD7F32]/80 group-hover:from-[#CD7F32]/80 group-hover:to-[#FFA07A]/80 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-[#FFC107]" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-8 h-8 text-[#FFA07A]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                   </svg>
                 </div>
@@ -331,9 +331,9 @@ export default function Home() {
                 <p className="text-[#63666D] mb-4 text-[15px] leading-[21px]">
                   Özel ekipmanlarla ağır yük taşımacılığında uzman hizmet.
                 </p>
-                <a href="#contact" className="text-[#FFC107] font-semibold flex items-center gap-2 group">
+                <a href="#contact" className="text-[#FFA07A] font-semibold flex items-center gap-2 group">
                   Detaylar
-                  <div className="w-16 h-0.5 bg-yellow-200 group-hover:bg-[#FFC107] transition-colors"></div>
+                  <div className="w-16 h-0.5 bg-yellow-200 group-hover:bg-[#FFA07A] transition-colors"></div>
                 </a>
               </div>
             </div>
@@ -342,7 +342,7 @@ export default function Home() {
           {/* Additional Services Grid */}
           <div className="grid md:grid-cols-4 gap-6 mt-12">
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 group animate-fade-in-up animate-delay-600">
-              <div className="w-12 h-12 bg-[#007BFF] rounded-lg mb-4 flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#202953] rounded-lg mb-4 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -352,7 +352,7 @@ export default function Home() {
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 group animate-fade-in-up animate-delay-800">
-              <div className="w-12 h-12 bg-[#28A745] rounded-lg mb-4 flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#66B2B2] rounded-lg mb-4 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z" />
                 </svg>
@@ -362,7 +362,7 @@ export default function Home() {
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 group animate-fade-in-up animate-delay-1000">
-              <div className="w-12 h-12 bg-[#FFC107] rounded-lg mb-4 flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#FFA07A] rounded-lg mb-4 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z" />
                 </svg>
@@ -386,7 +386,7 @@ export default function Home() {
           <div className="text-center mt-12 animate-fade-in-up animate-delay-1400">
             <p className="text-[rgba(99,102,109,0.68)] text-[14px] leading-[20px]">
               Bu sadece buzdağının görünen kısmı. Hizmetlerimizi sizin{" "}
-              <a href="#contact" className="text-[#007BFF] underline">özel ihtiyaçlarınıza</a> göre şekillendiriyoruz.
+              <a href="#contact" className="text-[#202953] underline">özel ihtiyaçlarınıza</a> göre şekillendiriyoruz.
             </p>
           </div>
         </div>
@@ -397,29 +397,29 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center animate-fade-in-up">
-              <div className="text-6xl lg:text-[150px] font-semibold text-[#007BFF] border-2 border-[#007BFF] rounded-lg p-8 mb-4 leading-[135px]">
+              <div className="text-6xl lg:text-[150px] font-semibold text-[#202953] border-2 border-[#202953] rounded-lg p-8 mb-4 leading-[135px]">
                 <span data-target="99">0</span>%
               </div>
               <div className="bg-gray-50 px-8 py-4 rounded-lg">
-                <p className="text-[#007BFF] font-medium text-[17px] leading-[20px]">Müşteri Memnuniyeti</p>
+                <p className="text-[#202953] font-medium text-[17px] leading-[20px]">Müşteri Memnuniyeti</p>
               </div>
             </div>
             
             <div className="text-center animate-fade-in-up animate-delay-200">
-              <div className="text-6xl lg:text-[150px] font-semibold text-[#28A745] border-2 border-[#28A745] rounded-lg p-8 mb-4 leading-[135px]">
+              <div className="text-6xl lg:text-[150px] font-semibold text-[#66B2B2] border-2 border-[#66B2B2] rounded-lg p-8 mb-4 leading-[135px]">
                 <span data-target="15">0</span>+
               </div>
               <div className="bg-gray-50 px-8 py-4 rounded-lg">
-                <p className="text-[#28A745] font-medium text-[17px] leading-[20px]">Yıllık Deneyim</p>
+                <p className="text-[#66B2B2] font-medium text-[17px] leading-[20px]">Yıllık Deneyim</p>
               </div>
             </div>
             
             <div className="text-center animate-fade-in-up animate-delay-400">
-              <div className="text-6xl lg:text-[150px] font-semibold text-[#FFC107] border-2 border-[#FFC107] rounded-lg p-8 mb-4 leading-[135px]">
+              <div className="text-6xl lg:text-[150px] font-semibold text-[#FFA07A] border-2 border-[#FFA07A] rounded-lg p-8 mb-4 leading-[135px]">
                 <span data-target="500">0</span>+
               </div>
               <div className="bg-gray-50 px-8 py-4 rounded-lg">
-                <p className="text-[#FFC107] font-medium text-[17px] leading-[20px]">Başarılı Proje</p>
+                <p className="text-[#FFA07A] font-medium text-[17px] leading-[20px]">Başarılı Proje</p>
               </div>
             </div>
           </div>
@@ -431,8 +431,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-white text-[#007BFF] px-4 py-2 rounded-lg mb-6">
-                <div className="w-2 h-2 bg-[#007BFF] rounded-full"></div>
+              <div className="inline-flex items-center gap-2 bg-white text-[#202953] px-4 py-2 rounded-lg mb-6">
+                <div className="w-2 h-2 bg-[#202953] rounded-full"></div>
                 <span className="font-semibold text-[15px]">Hakkımızda</span>
               </div>
               <h2 className="text-4xl lg:text-[44px] font-semibold text-[#0E0E0E] mb-6 leading-[53px] tracking-[-1px]">
@@ -441,7 +441,7 @@ export default function Home() {
               <p className="text-[#63666D] mb-6 text-[17px] leading-[26px]">
                 Tüm Marmara Limanları ve İzmir - Mersin limanlarında uzun yıllardan bugüne taşımacılık ve gümrük hizmetleri konusundaki tecrübemizi, ÇNR lojistik adı altında, profesyonel kadromuz ve modern teknolojimizle sizlere sunuyoruz.
               </p>
-              <a href="#contact" className="bg-[#007BFF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0056B3] transition-colors">
+              <a href="#contact" className="bg-[#202953] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#1A232B] transition-colors">
                 Daha Fazla Bilgi
               </a>
             </div>
@@ -457,7 +457,7 @@ export default function Home() {
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg">
-                  <svg className="w-8 h-8 text-[#007BFF]" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-8 h-8 text-[#202953]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -471,8 +471,8 @@ export default function Home() {
       <section id="gallery" className="py-20 px-4 lg:px-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#E3F2FD] text-[#007BFF] px-4 py-2 rounded-lg mb-6">
-              <div className="w-2 h-2 bg-[#007BFF] rounded-full"></div>
+            <div className="inline-flex items-center gap-2 bg-[#E3F2FD] text-[#202953] px-4 py-2 rounded-lg mb-6">
+              <div className="w-2 h-2 bg-[#202953] rounded-full"></div>
               <span className="font-semibold text-[15px]">Galeri</span>
             </div>
             <h2 className="text-4xl lg:text-[44px] font-semibold text-[#0E0E0E] mb-6 leading-[53px] tracking-[-1px]">
@@ -575,19 +575,19 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 lg:px-20 bg-gradient-to-r from-[#007BFF] to-[#0056B3] relative overflow-hidden animate-fade-in-up animate-delay-200">
+      <section className="py-20 px-4 lg:px-20 bg-gradient-to-r from-[#202953] to-[#1A232B] relative overflow-hidden animate-fade-in-up animate-delay-200">
         <div className="absolute inset-0 animate-gradient">
-          <div className="absolute right-0 top-0 w-1/2 h-full bg-[#28A745] opacity-20"></div>
-          <div className="absolute left-0 top-0 w-1/3 h-full bg-[#FFC107] opacity-20"></div>
+          <div className="absolute right-0 top-0 w-1/2 h-full bg-[#66B2B2] opacity-20"></div>
+          <div className="absolute left-0 top-0 w-1/3 h-full bg-[#FFA07A] opacity-20"></div>
         </div>
         
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <h2 className="text-4xl lg:text-[50px] font-semibold text-white mb-8 leading-[55px] tracking-[-1px] animate-fade-in-up">
             Harekete geçmeye hazır mısınız? Hemen teklif alın.
           </h2>
-          <a href="#contact" className="group relative inline-flex items-center justify-center px-8 py-4 bg-[#FFC107] text-[#007BFF] font-semibold rounded-lg hover:bg-[#E0A800] transition-colors duration-300 transform hover:-translate-y-1 hover:shadow-xl animate-fade-in-up animate-delay-200">
+          <a href="#contact" className="group relative inline-flex items-center justify-center px-8 py-4 bg-[#FFA07A] text-[#202953] font-semibold rounded-lg hover:bg-[#CD7F32] transition-colors duration-300 transform hover:-translate-y-1 hover:shadow-xl animate-fade-in-up animate-delay-200">
             <span className="relative z-10">Teklif Al</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#E0A800] to-[#FFC107] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#CD7F32] to-[#FFA07A] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
         </div>
       </section>
@@ -596,8 +596,8 @@ export default function Home() {
       <section id="contact" className="py-20 px-4 lg:px-20 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#E3F2FD] text-[#007BFF] px-4 py-2 rounded-lg mb-6">
-              <div className="w-2 h-2 bg-[#007BFF] rounded-full"></div>
+            <div className="inline-flex items-center gap-2 bg-[#E3F2FD] text-[#202953] px-4 py-2 rounded-lg mb-6">
+              <div className="w-2 h-2 bg-[#202953] rounded-full"></div>
               <span className="font-semibold text-[15px]">İletişim</span>
             </div>
             <h2 className="text-4xl lg:text-[44px] font-semibold text-[#0E0E0E] mb-6 leading-[53px] tracking-[-1px]">
@@ -613,7 +613,7 @@ export default function Home() {
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#007BFF] rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#202953] rounded-lg flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                       </svg>
@@ -632,7 +632,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0E0E0E] mb-1">Telefon</h4>
-                      <a href="tel:+902128757983" className="text-[#007BFF] hover:underline">+90 (212) 875 79 83</a>
+                      <a href="tel:+902128757983" className="text-[#202953] hover:underline">+90 (212) 875 79 83</a>
                     </div>
                   </div>
                   
@@ -645,7 +645,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0E0E0E] mb-1">E-posta</h4>
-                      <a href="mailto:ahmet@cnrlojistikvedepolama.com" className="text-[#007BFF] hover:underline">ahmet@cnrlojistikvedepolama.com</a>
+                      <a href="mailto:ahmet@cnrlojistikvedepolama.com" className="text-[#202953] hover:underline">ahmet@cnrlojistikvedepolama.com</a>
                     </div>
                   </div>
                   
@@ -670,21 +670,21 @@ export default function Home() {
               <form className="space-y-6">
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-[#0E0E0E] mb-2">Ad Soyad</label>
-                  <input type="text" id="fullName" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007BFF] focus:border-transparent transition-all duration-300" placeholder="Adınız Soyadınız" />
+                  <input type="text" id="fullName" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300" placeholder="Adınız Soyadınız" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-[#0E0E0E] mb-2">E-posta</label>
-                  <input type="email" id="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007BFF] focus:border-transparent transition-all duration-300" placeholder="e-posta@example.com" />
+                  <input type="email" id="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300" placeholder="e-posta@example.com" />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-[#0E0E0E] mb-2">Telefon</label>
-                  <input type="tel" id="phone" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007BFF] focus:border-transparent transition-all duration-300" placeholder="+90 (XXX) XXX XX XX" />
+                  <input type="tel" id="phone" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300" placeholder="+90 (XXX) XXX XX XX" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-[#0E0E0E] mb-2">Mesaj</label>
-                  <textarea id="message" rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007BFF] focus:border-transparent transition-all duration-300" placeholder="Mesajınızı buraya yazın..."></textarea>
+                  <textarea id="message" rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300" placeholder="Mesajınızı buraya yazın..."></textarea>
                 </div>
-                <button type="submit" className="w-full bg-[#007BFF] text-white py-3 rounded-lg font-semibold hover:bg-[#0056B3] transition-colors duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-xl">
+                <button type="submit" className="w-full bg-[#202953] text-white py-3 rounded-lg font-semibold hover:bg-[#1A232B] transition-colors duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-xl">
                   Mesaj Gönder
                 </button>
               </form>
@@ -783,7 +783,7 @@ export default function Home() {
 
       {/* Live Chat Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <div className="bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#128C7E] transition-colors cursor-pointer">
+        <div className="bg-[#66B2B2] text-white p-4 rounded-full shadow-lg hover:bg-[#4682B4] transition-colors cursor-pointer">
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
           </svg>
@@ -810,12 +810,12 @@ export default function Home() {
             </button>
           </div>
           <nav className="space-y-4">
-            <a href="#" className="block text-[#007BFF] font-semibold py-2">Anasayfa</a>
+            <a href="#" className="block text-[#202953] font-semibold py-2">Anasayfa</a>
             <a href="#about" className="block text-gray-600 font-semibold py-2">Hakkımızda</a>
             <a href="#services" className="block text-gray-600 font-semibold py-2">Hizmetlerimiz</a>
             <a href="#gallery" className="block text-gray-600 font-semibold py-2">Galeri</a>
             <a href="#contact" className="block text-gray-600 font-semibold py-2">İletişim</a>
-            <a href="#contact" className="block bg-[#FFC107] text-white px-4 py-2 rounded-lg font-semibold text-center mt-4">
+            <a href="#contact" className="block bg-[#FFA07A] text-white px-4 py-2 rounded-lg font-semibold text-center mt-4">
               Teklif Al
             </a>
           </nav>
