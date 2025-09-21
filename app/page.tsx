@@ -620,7 +620,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0E0E0E] mb-1">Adres</h4>
-                      <p className="text-[#63666D]">Yakuplu Mah. Başkent Cd. Altındaş Apt. No:51 / 8<br />Beylikdüzü / İstanbul</p>
+                      <p className="text-[#63666D]">BARBAROS HAYRETTİN PAŞA Mah. 1997. SK PIKET LIFE Cad. No:12/97<br />34515 Esenyurt/İstanbul</p>
                     </div>
                   </div>
                   
@@ -632,7 +632,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0E0E0E] mb-1">Telefon</h4>
-                      <a href="tel:+902128757983" className="text-[#202953] hover:underline">+90 (212) 875 79 83</a>
+                      <a href="tel:+905303732930" className="text-[#202953] hover:underline">+90 (530) 373 29 30</a>
                     </div>
                   </div>
                   
@@ -657,9 +657,26 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0E0E0E] mb-1">WhatsApp</h4>
-                      <a href="https://wa.me/902128757983" className="text-[#25D366] hover:underline">WhatsApp İçin Tıklayın</a>
+                      <a href="https://wa.me/905303732930" className="text-[#25D366] hover:underline">WhatsApp İçin Tıklayın</a>
                     </div>
                   </div>
+
+                  {/* New Company Information */}
+                  <div className="space-y-6 pt-6 border-t border-gray-200 mt-6">
+                    <div>
+                      <h4 className="font-semibold text-[#0E0E0E] mb-1">Vergi Numarası</h4>
+                      <p className="text-[#63666D]">2582037872</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-[#0E0E0E] mb-1">Vergi Dairesi</h4>
+                      <p className="text-[#63666D]">ESENYURT VERGİ DAİRESİ MÜDÜRLÜĞÜ (034298)</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-[#0E0E0E] mb-1">Ticaret Sicil Numarası</h4>
+                      <p className="text-[#63666D]">389230</p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -718,7 +735,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-gray-300 text-sm mb-1">Telefon</p>
-                  <a href="tel:+902128757983" className="text-gray-400 underline">+90 (212) 875 79 83</a>
+                  <a href="tel:+905303732930" className="text-gray-400 underline">+90 (530) 373 29 30</a>
                 </div>
               </div>
             </div>
@@ -748,7 +765,7 @@ export default function Home() {
           
           <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              Copyright © 2024 Tüm hakları saklıdır. | ÇNR Lojistik ve Depolama
+              Copyright © 2024 Tüm hakları saklıdır. | ÇNR LOJİSTİK VE DEPOLAMA LİMİTED ŞİRKETİ
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:-translate-y-1">
