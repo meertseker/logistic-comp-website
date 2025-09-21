@@ -221,7 +221,7 @@ export default function Home() {
             {/* İthalat Konteyner Taşımacılığı */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg relative hover:shadow-xl transition-shadow">
               <div className="h-64 relative">
-                <Image
+          <Image
                   src="/IMG-20230928-WA0028.jpg"
                   alt="İthalat Konteyner Taşımacılığı"
                   fill
@@ -253,7 +253,7 @@ export default function Home() {
             {/* Ağır Yük Taşımacılığı */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg relative hover:shadow-xl transition-shadow">
               <div className="h-64 relative">
-                <Image
+          <Image
                   src="/IMG-20230928-WA0022.jpg"
                   alt="Ağır Yük Taşımacılığı"
                   fill
@@ -495,7 +495,7 @@ export default function Home() {
             </div>
             
             <div className="relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <Image
+          <Image
                 src="/IMG-20230928-WA0024.jpg"
                 alt="Lojistik Hizmetleri 6"
                 fill
@@ -776,4 +776,4 @@ export default function Home() {
       </script>
     </div>
   );
-} 
+}
