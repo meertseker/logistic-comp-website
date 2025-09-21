@@ -59,14 +59,14 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className={`min-h-screen ${isMobileMenuOpen ? 'overflow-hidden' : 'bg-white'}`}>
       {/* Header */}
       <header className="px-4 py-6 lg:px-20 bg-white shadow-sm sticky top-0 z-50">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src="/CNR-LOGO.PNG"
+              src="/cnr-logo.png"
               alt="ÇNR Lojistik Logo"
               width={160}
               height={50}
@@ -89,7 +89,7 @@ export default function Home() {
           </nav>
           
           {/* CTA Button */}
-          <a href="#contact" className="text-[#007BFF] font-semibold">Teklif Al</a>
+          <a href="#contact" className="text-[#007BFF] font-semibold hidden md:block">Teklif Al</a>
         </div>
       </header>
 
@@ -791,12 +791,17 @@ export default function Home() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 ${isMobileMenuOpen ? '' : 'hidden'}`} id="mobile-menu-overlay" onClick={() => closeMobileMenu()}>
-        <div className="bg-white w-64 h-full p-6" onClick={(e) => e.stopPropagation()}>
+      <div className={`md:hidden fixed inset-0 bg-opacity-80 z-[999] transition-all duration-300 ${isMobileMenuOpen ? 'visible backdrop-blur-sm' : 'invisible'}`} onClick={() => closeMobileMenu()}>
+        <div className={`bg-white w-full max-h-[90vh] overflow-y-auto p-6 shadow-lg transform transition-transform duration-300 ease-out ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`} onClick={(e) => e.stopPropagation()}>
           <div className="flex justify-between items-center mb-8">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#007BFF] rounded"></div>
-              <span className="text-xl font-bold text-black">ÇNR Lojistik</span>
+              <Image
+                src="/cnr-logo.png"
+                alt="ÇNR Lojistik Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+              />
             </div>
             <button className="text-gray-600" onClick={() => closeMobileMenu()}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
