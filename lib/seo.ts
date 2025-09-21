@@ -13,8 +13,8 @@ export function getPageMetadata({
   image,
   lang = 'tr', // Default language
 }: PageMetadataProps) {
-  const siteName = "ÇNR Lojistik"; // Your site's name
-  const defaultImage = "https://yourdomain.com/cnr-logo.png"; // TODO: Replace with your actual domain for default OG image!
+  const siteName = "ÇNR LOJİSTİK VE DEPOLAMA LİMİTED ŞİRKETİ"; // Your site's name
+  const defaultImage = "/cnr-logo.png"; // Default OG image
 
   return {
     title: title ? `${title} | ${siteName}` : siteName,
