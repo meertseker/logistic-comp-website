@@ -2,7 +2,7 @@ import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 
 // Define your domain here
-const YOUR_DOMAIN = 'https://yourdomain.com'; // TODO: Replace with your actual domain!
+const YOUR_DOMAIN = 'https://www.cnrlojistikvedepolama.com';
 
 const generateSitemap = () => {
   const pages = [

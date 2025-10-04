@@ -1,0 +1,27 @@
+{
+  "name": "ÇNR Lojistik ve Depolama",
+  "short_name": "ÇNR Lojistik",
+  "description": "A'dan Z'ye taşımacılık ve gümrük hizmetlerinde standartları belirliyoruz. Modern teknoloji ve deneyimli ekibimizle yanınızdayız.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#202953",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/cnr-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/cnr-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "logistics", "transportation"],
+  "lang": "tr",
+  "dir": "ltr"
+}

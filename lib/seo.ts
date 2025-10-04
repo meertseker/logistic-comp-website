@@ -14,7 +14,7 @@ export function getPageMetadata({
   lang = 'tr', // Default language
 }: PageMetadataProps) {
   const siteName = "ÇNR LOJİSTİK VE DEPOLAMA LİMİTED ŞİRKETİ"; // Your site's name
-  const defaultImage = "/cnr-logo.png"; // Default OG image
+  const defaultImage = "https://www.cnrlojistikvedepolama.com/cnr-logo.png"; // Default OG image
 
   return {
     title: title ? `${title} | ${siteName}` : siteName,

@@ -4,4 +4,4 @@ Allow: /
 # Exclude specific paths if necessary
 # Disallow: /private/
 
-Sitemap: https://yourdomain.com/sitemap.xml 
+Sitemap: https://www.cnrlojistikvedepolama.com/sitemap.xml 
