@@ -3,7 +3,7 @@ const CACHE_NAME = 'cnr-lojistik-v1';
 const urlsToCache = [
   '/',
   '/cnr-logo.png',
-  '/CNR-LOGO-White.png',
+  '/cnr-logo.png',
   '/manifest.json'
 ];
 

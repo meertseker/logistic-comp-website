@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header";
+import StatsAnimator from "./components/StatsAnimator";
 import AnalyticsButton from "./components/AnalyticsButton";
 import { localBusinessSchema, websiteSchema } from "../lib/advanced-schema";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white animate-fade-in-up">
       <Header />
+      <StatsAnimator />
 
       <script
         type="application/ld+json"
@@ -540,19 +542,19 @@ export default function Home() {
               <form className="space-y-6">
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-[#0E0E0E] mb-2">Ad Soyad</label>
-                  <input type="text" id="fullName" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300" placeholder="Adınız Soyadınız" />
+                  <input type="text" id="fullName" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300 placeholder:text-gray-600" placeholder="Adınız Soyadınız" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-[#0E0E0E] mb-2">E-posta</label>
-                  <input type="email" id="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300" placeholder="e-posta@example.com" />
+                  <input type="email" id="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300 placeholder:text-gray-600" placeholder="e-posta@example.com" />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-[#0E0E0E] mb-2">Telefon</label>
-                  <input type="tel" id="phone" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300" placeholder="+90 (XXX) XXX XX XX" />
+                  <input type="tel" id="phone" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300 placeholder:text-gray-600" placeholder="+90 (XXX) XXX XX XX" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-[#0E0E0E] mb-2">Mesaj</label>
-                  <textarea id="message" rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300" placeholder="Mesajınızı buraya yazın..."></textarea>
+                  <textarea id="message" rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300 placeholder:text-gray-600" placeholder="Mesajınızı buraya yazın..."></textarea>
                 </div>
                 <AnalyticsButton
                   href="/iletisim"
@@ -574,7 +576,7 @@ export default function Home() {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-6">
                 <Image
-                  src="/CNR-LOGO-White.png"
+                  src="/cnr-logo.png"
                   alt="ÇNR Lojistik Logo"
                   width={160}
                   height={50}

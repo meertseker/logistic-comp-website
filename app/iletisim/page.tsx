@@ -35,8 +35,8 @@ const contactInfo = [
     title: "E-posta",
     icon: "✉️",
     details: [
-      "info@cnrlojistikvedepolama.com",
-      "destek@cnrlojistikvedepolama.com"
+      "ahmet@cnrlojistikvedepolama.com"
+      
     ]
   },
   {
