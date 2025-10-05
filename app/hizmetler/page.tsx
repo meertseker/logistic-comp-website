@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../components/Header';
 import { getPageMetadata } from '../../lib/seo';
+import { breadcrumbSchema } from '../../lib/advanced-schema';
 
 export const metadata: Metadata = {
   ...getPageMetadata({
@@ -175,6 +176,28 @@ export default function HizmetlerPage() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          ...breadcrumbSchema,
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Anasayfa", item: "https://www.cnrlojistikvedepolama.com" },
+            { "@type": "ListItem", position: 2, name: "Hizmetlerimiz", item: "https://www.cnrlojistikvedepolama.com/hizmetler" }
+          ]
+        }) }}
+      />
+
+      {/* Breadcrumb */}
+      <section className="bg-gray-50 py-4 px-4 lg:px-20">
+        <div className="max-w-6xl mx-auto">
+          <nav className="flex items-center space-x-2 text-sm">
+            <Link href="/" className="text-gray-600 hover:text-[#202953]">Anasayfa</Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-[#202953] font-semibold">Hizmetlerimiz</span>
+          </nav>
+        </div>
+      </section>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#202953] to-[#1a1f3a] text-white py-20 px-4 lg:px-20">

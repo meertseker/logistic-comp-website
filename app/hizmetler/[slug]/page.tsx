@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Header from '../../components/Header';
+import { serviceSchema } from '../../../lib/advanced-schema';
 import { getPageMetadata } from '../../../lib/seo';
 
 interface ServicePageProps {
@@ -295,6 +296,11 @@ export default function ServicePage({ params }: ServicePageProps) {
     <main className="min-h-screen bg-white">
       <Header />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema(service.title, service.description, `https://www.cnrlojistikvedepolama.com/hizmetler/${params.slug}`)) }}
+      />
+
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-4 px-4 lg:px-20">
         <div className="max-w-6xl mx-auto">
@@ -327,7 +333,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             {/* Main Content */}
             <div className="lg:col-span-2">
               <div 
-                className="prose prose-lg max-w-none"
+                className="prose prose-lg max-w-none text-gray-700"
                 dangerouslySetInnerHTML={{ __html: service.content }}
               />
             </div>

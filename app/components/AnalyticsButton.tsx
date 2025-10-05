@@ -1,13 +1,13 @@
 'use client';
 
-import { trackPhoneCall, trackServiceClick, trackContactForm } from '../../lib/analytics';
+import { trackPhoneCall, trackServiceClick, trackContactForm, trackExternalLink, trackWhatsApp } from '../../lib/analytics';
 
 interface AnalyticsButtonProps {
   href: string;
   onClick?: () => void;
   className: string;
   children: React.ReactNode;
-  trackingType: 'phone' | 'service' | 'contact';
+  trackingType: 'phone' | 'service' | 'contact' | 'external' | 'whatsapp';
   serviceName?: string;
 }
 
@@ -29,6 +29,12 @@ export default function AnalyticsButton({
         break;
       case 'contact':
         trackContactForm();
+        break;
+      case 'external':
+        trackExternalLink(href);
+        break;
+      case 'whatsapp':
+        trackWhatsApp();
         break;
     }
     if (onClick) onClick();

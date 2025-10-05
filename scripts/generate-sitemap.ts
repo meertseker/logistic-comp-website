@@ -1,23 +1,41 @@
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 
-// Define your domain here
-const YOUR_DOMAIN = 'https://www.cnrlojistikvedepolama.com';
+// Define your domain here (fallback to env if available)
+const YOUR_DOMAIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.cnrlojistikvedepolama.com';
 
 const generateSitemap = () => {
-  const pages = [
+  // Static pages
+  const pages: string[] = [
     '/',
-    '/#about',
-    '/#services',
-    '/#gallery',
-    '/#contact',
-    // Add other static pages or routes here
-    // Example: '/blog', '/products/category-1', etc.
+    '/hakkimizda',
+    '/hizmetler',
+    '/sss',
+    '/iletisim',
   ];
+
+  // Known service slugs (sync with app/hizmetler/[slug]/page.tsx)
+  const serviceSlugs = [
+    'ihracat-konteyner-tasimaciligi',
+    'ithalat-konteyner-tasimaciligi',
+    'agir-yuk-tasimaciligi',
+    'gumrukleme-islemleri',
+    'proje-tasimaciligi',
+    'adr-tasima',
+    'agir-nakliye-islemleri',
+    'liman-hizmetleri',
+    'motat-tasimaciligi',
+    'plastik-atik-tasimaciligi',
+    'kimyasal-yanici-tehlikeli-madde-tasimaciligi',
+    'iso-tank-tasimaciligi',
+  ];
+
+  const servicePages = serviceSlugs.map((slug) => `/hizmetler/${slug}`);
+  const allPages = [...pages, ...servicePages];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${pages
+  ${allPages
     .map((page) => {
       return `
     <url>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../components/Header';
 import { getPageMetadata } from '../../lib/seo';
+import { contactPageSchema } from '../../lib/advanced-schema';
 
 export const metadata: Metadata = {
   ...getPageMetadata({
@@ -64,6 +65,11 @@ export default function IletisimPage() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
 
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-4 px-4 lg:px-20">

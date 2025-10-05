@@ -14,22 +14,27 @@ export function getPageMetadata({
   lang = 'tr', // Default language
 }: PageMetadataProps) {
   const siteName = "ÇNR LOJİSTİK VE DEPOLAMA LİMİTED ŞİRKETİ"; // Your site's name
-  const defaultImage = "https://www.cnrlojistikvedepolama.com/cnr-logo.png"; // Default OG image
+  // Build absolute defaults based on site config
+  const { buildAbsoluteUrl } = require('./config');
+  const defaultImage = buildAbsoluteUrl('/cnr-logo.png');
+  const canonicalUrl = url ? buildAbsoluteUrl(url) : undefined;
 
   return {
     title: title ? `${title} | ${siteName}` : siteName,
     description: description || "A'dan Z'ye taşımacılık ve gümrük hizmetlerinde standartları belirliyoruz. Modern teknoloji ve deneyimli ekibimizle yanınızdayız.",
-    alternates: {
-      canonical: url,
-    },
+    alternates: canonicalUrl
+      ? {
+          canonical: canonicalUrl,
+        }
+      : undefined,
     openGraph: {
       title: title || siteName,
       description: description || "A'dan Z'ye taşımacılık ve gümrük hizmetlerinde standartları belirliyoruz. Modern teknoloji ve deneyimli ekibimizle yanınızdayız.",
-      url: url,
+      url: canonicalUrl,
       siteName: siteName,
       images: [
         {
-          url: image || defaultImage,
+          url: image ? buildAbsoluteUrl(image) : defaultImage,
           width: 1200,
           height: 630,
           alt: title || siteName,
@@ -42,7 +47,7 @@ export function getPageMetadata({
       card: "summary_large_image",
       title: title || siteName,
       description: description || "A'dan Z'ye taşımacılık ve gümrük hizmetlerinde standartları belirliyoruz. Modern teknoloji ve deneyimli ekibimizle yanınızdayız.",
-      images: [image || defaultImage],
+      images: [image ? buildAbsoluteUrl(image) : defaultImage],
     },
   };
 } 

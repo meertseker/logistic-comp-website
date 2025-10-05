@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { getPageMetadata } from '../lib/seo';
+import { GOOGLE_VERIFICATION } from '../lib/config';
 import { organizationSchema } from '../lib/schema';
 import { GA_TRACKING_ID } from '../lib/analytics';
 
@@ -58,14 +59,13 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   verification: {
-    google: 'your-google-verification-code', // TODO: Replace with your actual Google Search Console verification code
+    google: GOOGLE_VERIFICATION || undefined,
   },
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export default function RootLayout({

@@ -1,13 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header";
-import ClientHomePage from "./components/ClientHomePage";
 import AnalyticsButton from "./components/AnalyticsButton";
+import { localBusinessSchema, websiteSchema } from "../lib/advanced-schema";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
 
       {/* Hero Section */}
       <section className="relative px-4 py-20 lg:px-20 lg:py-32 min-h-screen bg-white overflow-hidden">
@@ -139,7 +148,7 @@ export default function Home() {
                   İhracat süreçlerinizde güvenilir ve hızlı konteyner taşımacılığı hizmeti.
                 </p>
                 <AnalyticsButton
-                  href="/iletisim"
+                  href="/hizmetler/ihracat-konteyner-tasimaciligi"
                   trackingType="service"
                   serviceName="İhracat Konteyner Taşımacılığı"
                   className="text-[#202953] font-semibold flex items-center gap-2 group"
@@ -176,7 +185,7 @@ export default function Home() {
                   İthalat süreçlerinizde profesyonel konteyner taşımacılığı çözümleri.
                 </p>
                 <AnalyticsButton
-                  href="/iletisim"
+                  href="/hizmetler/ithalat-konteyner-tasimaciligi"
                   trackingType="service"
                   serviceName="İthalat Konteyner Taşımacılığı"
                   className="text-[#66B2B2] font-semibold flex items-center gap-2 group"
@@ -212,7 +221,7 @@ export default function Home() {
                   Özel ekipmanlarla ağır yük taşımacılığında uzman hizmet.
                 </p>
                 <AnalyticsButton
-                  href="/iletisim"
+                  href="/hizmetler/agir-yuk-tasimaciligi"
                   trackingType="service"
                   serviceName="Ağır Yük Taşımacılığı"
                   className="text-[#FFA07A] font-semibold flex items-center gap-2 group"
@@ -235,7 +244,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">Gümrükleme İşlemleri</h3>
               <p className="text-[#63666D] text-sm mb-4">Profesyonel gümrük danışmanlığı ve işlem takibi</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/gumrukleme-islemleri"
                 trackingType="service"
                 serviceName="Gümrükleme İşlemleri"
                 className="text-[#202953] font-semibold text-sm hover:underline"
@@ -253,7 +262,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">Proje Taşımacılığı</h3>
               <p className="text-[#63666D] text-sm mb-4">Özel proje taşımacılığı çözümleri</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/proje-tasimaciligi"
                 trackingType="service"
                 serviceName="Proje Taşımacılığı"
                 className="text-[#66B2B2] font-semibold text-sm hover:underline"
@@ -271,7 +280,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">Ağır Nakliye İşlemleri</h3>
               <p className="text-[#63666D] text-sm mb-4">Özel ekipmanlarla ağır nakliye hizmetleri</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/agir-nakliye-islemleri"
                 trackingType="service"
                 serviceName="Ağır Nakliye İşlemleri"
                 className="text-[#FFA07A] font-semibold text-sm hover:underline"
@@ -289,7 +298,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">Liman Hizmetleri</h3>
               <p className="text-[#63666D] text-sm mb-4">Kapsamlı liman hizmetleri ve operasyon</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/liman-hizmetleri"
                 trackingType="service"
                 serviceName="Liman Hizmetleri"
                 className="text-[#6C757D] font-semibold text-sm hover:underline"
@@ -311,7 +320,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">Motat Taşımacılığı</h3>
               <p className="text-[#63666D] text-sm mb-4">Motat taşımacılığı uzman hizmetleri</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/motat-tasimaciligi"
                 trackingType="service"
                 serviceName="Motat Taşımacılığı"
                 className="text-[#28A745] font-semibold text-sm hover:underline"
@@ -329,7 +338,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">Plastik Atık Taşımacılığı</h3>
               <p className="text-[#63666D] text-sm mb-4">Çevre dostu plastik atık taşımacılığı</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/plastik-atik-tasimaciligi"
                 trackingType="service"
                 serviceName="Plastik Atık Taşımacılığı"
                 className="text-[#17A2B8] font-semibold text-sm hover:underline"
@@ -347,7 +356,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">ADR Taşıma</h3>
               <p className="text-[#63666D] text-sm mb-4">Tehlikeli madde taşımacılığı (ADR)</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/adr-tasima"
                 trackingType="service"
                 serviceName="ADR Taşıma"
                 className="text-[#DC3545] font-semibold text-sm hover:underline"
@@ -365,7 +374,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">Kimyasal Yanıcı Tehlikeli Madde Taşımacılığı</h3>
               <p className="text-[#63666D] text-sm mb-4">Güvenli kimyasal madde taşımacılığı</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/kimyasal-yanici-tehlikeli-madde-tasimaciligi"
                 trackingType="service"
                 serviceName="Kimyasal Yanıcı Tehlikeli Madde Taşımacılığı"
                 className="text-[#FFC107] font-semibold text-sm hover:underline"
@@ -386,7 +395,7 @@ export default function Home() {
               <h3 className="font-semibold text-[#0E0E0E] mb-2">ISO Tank Taşımacılığı</h3>
               <p className="text-[#63666D] text-sm mb-4">Sıvı kimyasal madde taşımacılığı</p>
               <AnalyticsButton
-                href="/iletisim"
+                href="/hizmetler/iso-tank-tasimaciligi"
                 trackingType="service"
                 serviceName="ISO Tank Taşımacılığı"
                 className="text-[#6F42C1] font-semibold text-sm hover:underline"
