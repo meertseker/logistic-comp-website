@@ -90,6 +90,7 @@ export default function Header() {
           type="button"
           aria-label="Menüyü Aç/Kapat"
           aria-expanded={isMobileOpen}
+          aria-controls="mobile-nav"
           className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white rounded p-2"
           onClick={() => setIsMobileOpen((v) => !v)}
         >
@@ -103,7 +104,7 @@ export default function Header() {
 
         {/* Mobile dropdown menu */}
         {isMobileOpen && (
-          <div className="absolute inset-x-0 top-full md:hidden bg-[#202953] -mx-4 lg:-mx-20 shadow-lg animate-slide-in-top z-40">
+          <div id="mobile-nav" className="absolute inset-x-0 top-full md:hidden bg-[#202953] -mx-4 lg:-mx-20 shadow-lg animate-slide-in-top z-40">
             <div className="px-4 lg:px-20 py-4 flex flex-col gap-2">
               <Link href="/" onClick={closeMobile} className={`block px-3 py-2 rounded-md font-semibold ${pathname === '/' ? 'text-[#202953] bg-white' : 'text-white hover:bg-white/10'}`}>Anasayfa</Link>
               <Link href="/hakkimizda" onClick={closeMobile} className={`block px-3 py-2 rounded-md font-semibold ${pathname === '/hakkimizda' ? 'text-[#202953] bg-white' : 'text-white hover:bg-white/10'}`}>Hakkımızda</Link>

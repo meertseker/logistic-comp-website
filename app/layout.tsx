@@ -7,6 +7,7 @@ import { getPageMetadata } from '../lib/seo';
 import { GOOGLE_VERIFICATION } from '../lib/config';
 import { organizationSchema } from '../lib/schema';
 import { GA_TRACKING_ID } from '../lib/analytics';
+import AnalyticsRouteTracker from './components/AnalyticsRouteTracker';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,21 +77,22 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
-        {/* Google Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
+        {/* Google Analytics (loaded only when ID is provided) */}
+        {GA_TRACKING_ID && GA_TRACKING_ID !== 'G-XXXXXXXXX' && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga-init" strategy="afterInteractive"
+            >{`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);} 
+              gtag('js', new Date());
+              gtag('config', '${GA_TRACKING_ID}');
+            `}</Script>
+          </>
+        )}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
@@ -99,6 +101,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <AnalyticsRouteTracker />
         {children}
       </body>
     </html>

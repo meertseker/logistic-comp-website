@@ -21,7 +21,7 @@ export default function ContactForm({ className }: ContactFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={className ?? "space-y-6"} action="https://formspree.io/f/mgvnnleg" method="POST">
+    <form onSubmit={handleSubmit} className={className ?? "space-y-6"} action="https://formspree.io/f/mgvnnleg" method="POST" noValidate>
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -68,7 +68,11 @@ export default function ContactForm({ className }: ContactFormProps) {
         </div>
       </div>
 
-      
+      {/* Honeypot field */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="company">Şirket</label>
+        <input type="text" id="company" name="company" tabIndex={-1} autoComplete="off" />
+      </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -85,6 +89,14 @@ export default function ContactForm({ className }: ContactFormProps) {
         <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
 
+      {/* KVKK consent */}
+      <div className="flex items-start gap-3">
+        <input id="kvkk" name="kvkk" type="checkbox" required className="mt-1" />
+        <label htmlFor="kvkk" className="text-sm text-gray-700">
+          KVKK kapsamında kişisel verilerimin işlenmesine ilişkin aydınlatma metnini okudum ve onaylıyorum.
+        </label>
+      </div>
+
       <button
         type="submit"
         disabled={state.submitting}
@@ -93,7 +105,7 @@ export default function ContactForm({ className }: ContactFormProps) {
         {state.submitting ? "Gönderiliyor..." : "Mesaj Gönder"}
       </button>
 
-      {state.errors && state.errors.length > 0 && (
+      {state.errors && Object.keys(state.errors).length > 0 && (
         <p className="text-red-700 bg-red-50 border border-red-200 rounded-lg p-3" role="alert" aria-live="polite">
           Gönderirken bir hata oluştu. Lütfen tekrar deneyin.
         </p>

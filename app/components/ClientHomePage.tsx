@@ -14,7 +14,7 @@ export default function ClientHomePage() {
         const targetAttr = counter.getAttribute('data-target');
         const target = targetAttr ? +targetAttr : 0;
         const duration = 1000;
-        let start = 0;
+        const start = 0;
         let startTime: number | null = null;
 
         const easeOutQuad = (t: number) => t * (2 - t);

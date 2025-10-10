@@ -1,3 +1,4 @@
+import { buildAbsoluteUrl } from './config';
 interface PageMetadataProps {
   title?: string;
   description?: string;
@@ -15,7 +16,6 @@ export function getPageMetadata({
 }: PageMetadataProps) {
   const siteName = "ÇNR LOJİSTİK VE DEPOLAMA LİMİTED ŞİRKETİ"; // Your site's name
   // Build absolute defaults based on site config
-  const { buildAbsoluteUrl } = require('./config');
   const defaultImage = buildAbsoluteUrl('/cnr-logo.png');
   const canonicalUrl = url ? buildAbsoluteUrl(url) : undefined;
 

@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Header from '../components/Header';
 import ContactForm from "../components/ContactForm";
 import ClientOnly from "../components/ClientOnly";
@@ -138,8 +137,9 @@ export default function IletisimPage() {
                     height="450"
                     style={{ border: 0 }}
                     allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                  loading="lazy"
+                  title="ÇNR Lojistik konumu"
+                  referrerPolicy="strict-origin-when-cross-origin"
                     className="w-full h-full"
                   />
                 </div>

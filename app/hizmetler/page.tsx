@@ -206,7 +206,7 @@ export default function HizmetlerPage() {
             Profesyonel Lojistik Hizmetleri
           </h1>
           <p className="text-xl lg:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            A'dan Z'ye taşımacılık ve gümrük hizmetlerinde standartları belirliyoruz. 
+            A&apos;dan Z&apos;ye taşımacılık ve gümrük hizmetlerinde standartları belirliyoruz. 
             Modern teknoloji ve deneyimli ekibimizle yanınızdayız.
           </p>
         </div>

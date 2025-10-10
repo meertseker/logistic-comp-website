@@ -41,7 +41,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-xl text-[#63666D] max-w-lg font-medium leading-relaxed">
-                A'dan Z'ye taşımacılık ve gümrük hizmetlerinde standartları belirliyoruz. 
+                A&apos;dan Z&apos;ye taşımacılık ve gümrük hizmetlerinde standartları belirliyoruz. 
                 Modern teknoloji ve deneyimli ekibimizle yanınızdayız.
               </p>
             </div>

@@ -288,7 +288,7 @@ export default function HakkimizdaPage() {
             <div className="bg-gradient-to-br from-green-600 to-green-800 text-white rounded-2xl p-8">
               <h3 className="text-3xl font-bold mb-6">Vizyonumuz</h3>
               <p className="text-lg leading-relaxed">
-                Türkiye'nin en güvenilir ve yenilikçi lojistik şirketi olmak. 
+                Türkiye&apos;nin en güvenilir ve yenilikçi lojistik şirketi olmak. 
                 Sektörde teknoloji kullanımında öncü olarak, müşterilerimize 
                 en kaliteli hizmeti sunmak ve uluslararası arenada da 
                 tanınan bir marka haline gelmek.

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { trackPhoneCall, trackServiceClick, trackContactForm, trackExternalLink, trackWhatsApp } from '../../lib/analytics';
 
 interface AnalyticsButtonProps {
@@ -39,6 +40,16 @@ export default function AnalyticsButton({
     }
     if (onClick) onClick();
   };
+
+  const isInternal = href.startsWith('/') && !href.startsWith('//');
+
+  if (isInternal) {
+    return (
+      <Link href={href} onClick={handleClick} className={className}>
+        {children}
+      </Link>
+    );
+  }
 
   return (
     <a href={href} onClick={handleClick} className={className}>

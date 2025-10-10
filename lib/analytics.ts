@@ -3,10 +3,13 @@ export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID || 'G-XXXXX
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('config', GA_TRACKING_ID, {
-      page_path: url,
-    });
+  if (typeof window !== 'undefined' && GA_TRACKING_ID && GA_TRACKING_ID !== 'G-XXXXXXXXX') {
+    const w = window as Window & { gtag?: (...args: unknown[]) => void };
+    if (w.gtag) {
+      w.gtag('config', GA_TRACKING_ID, {
+        page_path: url,
+      });
+    }
   }
 };
 
@@ -22,12 +25,15 @@ export const event = ({
   label?: string;
   value?: number;
 }) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: value,
-    });
+  if (typeof window !== 'undefined' && GA_TRACKING_ID && GA_TRACKING_ID !== 'G-XXXXXXXXX') {
+    const w = window as Window & { gtag?: (...args: unknown[]) => void };
+    if (w.gtag) {
+      w.gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: value,
+      });
+    }
   }
 };
 
@@ -66,12 +72,15 @@ export const trackServiceClick = (serviceName: string) => {
 
 // Enhanced tracking functions
 export const trackPageView = (pageName: string, pageTitle: string) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'page_view', {
-      page_title: pageTitle,
-      page_location: window.location.href,
-      page_name: pageName,
-    });
+  if (typeof window !== 'undefined') {
+    const w = window as Window & { gtag?: (...args: unknown[]) => void };
+    if (w.gtag) {
+      w.gtag('event', 'page_view', {
+        page_title: pageTitle,
+        page_location: window.location.href,
+        page_name: pageName,
+      });
+    }
   }
 };
 

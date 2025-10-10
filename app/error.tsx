@@ -1,6 +1,8 @@
 'use client';
 
-export default function GlobalError({ error, reset }: { error: Error; reset: () => void }) {
+import Link from 'next/link';
+
+export default function GlobalError({ reset }: { error: Error; reset: () => void }) {
   return (
     <html>
       <body>
@@ -10,7 +12,7 @@ export default function GlobalError({ error, reset }: { error: Error; reset: () 
             <p className="text-gray-600 mb-8">Beklenmeyen bir hata meydana geldi. Lütfen tekrar deneyin.</p>
             <div className="flex gap-4 justify-center">
               <button onClick={reset} className="bg-[#202953] text-white px-6 py-3 rounded-lg font-semibold">Tekrar Dene</button>
-              <a href="/" className="border-2 border-[#202953] text-[#202953] px-6 py-3 rounded-lg font-semibold">Anasayfa</a>
+              <Link href="/" className="border-2 border-[#202953] text-[#202953] px-6 py-3 rounded-lg font-semibold">Anasayfa</Link>
             </div>
           </div>
         </main>

@@ -1,128 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hakkimizda</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/sss</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/iletisim</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
   
-  <!-- Service Detail Pages -->
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/ihracat-konteyner-tasimaciligi</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/ithalat-konteyner-tasimaciligi</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/agir-yuk-tasimaciligi</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/gumrukleme-islemleri</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/proje-tasimaciligi</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/agir-nakliye-islemleri</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/liman-hizmetleri</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/motat-tasimaciligi</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/plastik-atik-tasimaciligi</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/adr-tasima</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/kimyasal-yanici-tehlikeli-madde-tasimaciligi</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/hizmetler/iso-tank-tasimaciligi</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
   
-  <!-- Anchor Links (for homepage sections) -->
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/#about</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/#gallery</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.cnrlojistikvedepolama.com/#contact</loc>
-    <lastmod>2024-12-19T12:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hakkimizda</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/sss</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/iletisim</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/ihracat-konteyner-tasimaciligi</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/ithalat-konteyner-tasimaciligi</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/agir-yuk-tasimaciligi</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/gumrukleme-islemleri</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/proje-tasimaciligi</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/adr-tasima</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/agir-nakliye-islemleri</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/liman-hizmetleri</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/motat-tasimaciligi</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/plastik-atik-tasimaciligi</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/kimyasal-yanici-tehlikeli-madde-tasimaciligi</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.cnrlojistikvedepolama.com/hizmetler/iso-tank-tasimaciligi</loc>
+      <lastmod>2025-10-10T19:52:38.335Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
 </urlset>

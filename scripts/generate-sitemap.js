@@ -1,12 +1,12 @@
-import { writeFileSync } from 'fs';
-import { resolve } from 'path';
+const fs = require('fs');
+const path = require('path');
 
 // Define your domain here (fallback to env if available)
 const YOUR_DOMAIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.cnrlojistikvedepolama.com';
 
 const generateSitemap = () => {
   // Static pages
-  const pages: string[] = [
+  const pages = [
     '/',
     '/hakkimizda',
     '/hizmetler',
@@ -49,8 +49,8 @@ const generateSitemap = () => {
     .join('')}
 </urlset>`;
 
-  const filePath = resolve(process.cwd(), 'public', 'sitemap.xml');
-  writeFileSync(filePath, sitemap, 'utf-8');
+  const filePath = path.resolve(process.cwd(), 'public', 'sitemap.xml');
+  fs.writeFileSync(filePath, sitemap, 'utf-8');
   console.log('sitemap.xml generated!');
 };
 
