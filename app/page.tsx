@@ -3,6 +3,8 @@ import Link from "next/link";
 import Header from "./components/Header";
 import StatsAnimator from "./components/StatsAnimator";
 import AnalyticsButton from "./components/AnalyticsButton";
+import ContactForm from "./components/ContactForm";
+import ClientOnly from "./components/ClientOnly";
 import { localBusinessSchema, websiteSchema } from "../lib/advanced-schema";
 
 export default function Home() {
@@ -539,31 +541,9 @@ export default function Home() {
             
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-semibold text-[#0E0E0E] mb-6">Mesaj Gönderin</h3>
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="fullName" className="block text-sm font-medium text-[#0E0E0E] mb-2">Ad Soyad</label>
-                  <input type="text" id="fullName" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300 placeholder:text-gray-600" placeholder="Adınız Soyadınız" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-[#0E0E0E] mb-2">E-posta</label>
-                  <input type="email" id="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300 placeholder:text-gray-600" placeholder="e-posta@example.com" />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-[#0E0E0E] mb-2">Telefon</label>
-                  <input type="tel" id="phone" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300 placeholder:text-gray-600" placeholder="+90 (XXX) XXX XX XX" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-[#0E0E0E] mb-2">Mesaj</label>
-                  <textarea id="message" rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent transition-all duration-300 placeholder:text-gray-600" placeholder="Mesajınızı buraya yazın..."></textarea>
-                </div>
-                <AnalyticsButton
-                  href="/iletisim"
-                  trackingType="contact"
-                  className="w-full bg-[#202953] text-white py-3 rounded-lg font-semibold hover:bg-[#1A232B] transition-colors duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-xl block text-center"
-                >
-                  Mesaj Gönder
-                </AnalyticsButton>
-              </form>
+              <ClientOnly>
+                <ContactForm />
+              </ClientOnly>
             </div>
           </div>
         </div>

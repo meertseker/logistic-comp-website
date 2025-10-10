@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../components/Header';
+import ContactForm from "../components/ContactForm";
+import ClientOnly from "../components/ClientOnly";
 import { getPageMetadata } from '../../lib/seo';
 import { contactPageSchema } from '../../lib/advanced-schema';
 
@@ -50,16 +52,7 @@ const contactInfo = [
   }
 ];
 
-const services = [
-  "İhracat Konteyner Taşımacılığı",
-  "İthalat Konteyner Taşımacılığı", 
-  "Ağır Yük Taşımacılığı",
-  "Gümrükleme İşlemleri",
-  "Proje Taşımacılığı",
-  "ADR Taşıma",
-  "ISO Tank Taşımacılığı",
-  "Diğer Lojistik Hizmetleri"
-];
+// removed services array; no longer needed by the form
 
 export default function IletisimPage() {
   return (
@@ -126,103 +119,9 @@ export default function IletisimPage() {
               <h2 className="text-3xl font-bold text-[#202953] mb-6">
                 Bize Mesaj Gönderin
               </h2>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Ad Soyad *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent"
-                      placeholder="Adınız ve soyadınız"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Şirket
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent"
-                      placeholder="Şirket adınız"
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      E-posta *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent"
-                      placeholder="ornek@email.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Telefon *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent"
-                      placeholder="+90 5XX XXX XX XX"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    İlgilendiğiniz Hizmet
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent"
-                  >
-                    <option value="">Hizmet seçiniz</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service}>
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mesajınız *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#202953] focus:border-transparent"
-                    placeholder="Mesajınızı buraya yazın..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#202953] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a1f3a] transition-colors duration-300"
-                >
-                  Mesaj Gönder
-                </button>
-              </form>
+              <ClientOnly>
+                <ContactForm className="space-y-6" />
+              </ClientOnly>
             </div>
 
             {/* Map & Additional Info */}
@@ -233,20 +132,16 @@ export default function IletisimPage() {
                   Konumumuz
                 </h3>
                 <div className="relative h-64 rounded-lg overflow-hidden">
-                  <Image
-                    src="/IMG-20230928-WA0026.jpg"
-                    alt="ÇNR Lojistik - Esenyurt, İstanbul Konumu"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d663.4721064911428!2d28.640606061887645!3d41.0178385563277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f0f364e7f5f%3A0xe8e2b96b6e5a9590!2sPhuket%20Life!5e0!3m2!1str!2suk!4v1760118675304!5m2!1str!2suk"
+                    width="600"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <div className="text-4xl mb-4">📍</div>
-                      <p className="font-semibold">Esenyurt, İstanbul</p>
-                      <p className="text-sm">BARBAROS HAYRETTİN PAŞA Mah.</p>
-                    </div>
-                  </div>
                 </div>
                 <div className="mt-4 text-sm text-gray-600">
                   <p><strong>Adres:</strong> BARBAROS HAYRETTİN PAŞA Mah. 1997. SK PIKET LIFE Cad. No:12/97, Esenyurt/İstanbul</p>
@@ -271,7 +166,7 @@ export default function IletisimPage() {
                   </a>
                   
                   <a 
-                    href="mailto:info@cnrlojistikvedepolama.com"
+                    href="mailto:ahmet@cnrlojistikvedepolama.com"
                     className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
                   >
                     <span className="text-2xl mr-4">✉️</span>
