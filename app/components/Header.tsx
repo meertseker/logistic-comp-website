@@ -1,17 +1,22 @@
+
 'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Header() {
   const pathname = usePathname();
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  const closeMobile = () => setIsMobileOpen(false);
 
   return (
     <header className="px-4 py-6 lg:px-20 bg-[#202953] shadow-sm sticky top-0 z-50">
       <div className="flex items-center justify-between relative z-10">
         <div className="flex items-center">
-          <Link href="/">
+          <Link href="/" onClick={closeMobile}>
             <Image
               src="/cnr-logo.png"
               alt="ÇNR Lojistik Logo"
@@ -22,7 +27,8 @@ export default function Header() {
             />
           </Link>
         </div>
-        
+
+        {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <Link 
             href="/" 
@@ -78,6 +84,35 @@ export default function Header() {
             İletişim
           </Link>
         </nav>
+
+        {/* Mobile hamburger */}
+        <button
+          type="button"
+          aria-label="Menüyü Aç/Kapat"
+          aria-expanded={isMobileOpen}
+          className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-white rounded p-2"
+          onClick={() => setIsMobileOpen((v) => !v)}
+        >
+          {/* Simple hamburger icon */}
+          <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+
+        {/* Mobile dropdown menu */}
+        {isMobileOpen && (
+          <div className="absolute inset-x-0 top-full md:hidden bg-[#202953] -mx-4 lg:-mx-20 shadow-lg animate-slide-in-top z-40">
+            <div className="px-4 lg:px-20 py-4 flex flex-col gap-2">
+              <Link href="/" onClick={closeMobile} className={`block px-3 py-2 rounded-md font-semibold ${pathname === '/' ? 'text-[#202953] bg-white' : 'text-white hover:bg-white/10'}`}>Anasayfa</Link>
+              <Link href="/hakkimizda" onClick={closeMobile} className={`block px-3 py-2 rounded-md font-semibold ${pathname === '/hakkimizda' ? 'text-[#202953] bg-white' : 'text-white hover:bg-white/10'}`}>Hakkımızda</Link>
+              <Link href="/hizmetler" onClick={closeMobile} className={`block px-3 py-2 rounded-md font-semibold ${pathname === '/hizmetler' || pathname.startsWith('/hizmetler/') ? 'text-[#202953] bg-white' : 'text-white hover:bg-white/10'}`}>Hizmetlerimiz</Link>
+              <Link href="/sss" onClick={closeMobile} className={`block px-3 py-2 rounded-md font-semibold ${pathname === '/sss' ? 'text-[#202953] bg-white' : 'text-white hover:bg-white/10'}`}>SSS</Link>
+              <Link href="/iletisim" onClick={closeMobile} className={`block px-3 py-2 rounded-md font-semibold ${pathname === '/iletisim' ? 'text-[#202953] bg-white' : 'text-white hover:bg-white/10'}`}>İletişim</Link>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
