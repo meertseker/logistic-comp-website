@@ -18,9 +18,6 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   generateEtags: true,
   
-  // SWC Minification
-  swcMinify: true,
-  
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
@@ -41,7 +38,7 @@ const nextConfig: NextConfig = {
   
   // Performance optimizations
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Disabled - causes critters module error
     optimizePackageImports: ['@next/font', 'next/image', 'react'],
   },
   // Bundle analyzer (uncomment to analyze bundle)
