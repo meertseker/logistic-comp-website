@@ -27,5 +27,15 @@
     "tailwindcss": "^4",
     "ts-node": "^10.9.1",
     "typescript": "^5"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "last 2 versions",
+    "chrome >= 90",
+    "firefox >= 88",
+    "safari >= 14",
+    "edge >= 90"
+  ]
 }

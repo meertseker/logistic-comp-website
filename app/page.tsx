@@ -89,8 +89,11 @@ export default function Home() {
                 alt="ÇNR Lojistik - Modern Lojistik Hizmetleri ve Güvenilir Taşımacılık Çözümleri"
                 fill
                 className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                priority={true}
+                loading="eager"
+                fetchPriority="high"
+                quality={85}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1200px) 50vw, 600px"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
               />
@@ -134,7 +137,9 @@ export default function Home() {
                   alt="İhracat Konteyner Taşımacılığı - ÇNR Lojistik"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  loading="lazy"
+                  quality={80}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#202953]/80 to-[#1A232B]/80 group-hover:from-[#1A232B]/80 group-hover:to-[#202953]/80 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
@@ -170,7 +175,9 @@ export default function Home() {
                   alt="İthalat Konteyner Taşımacılığı - ÇNR Lojistik"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  loading="lazy"
+                  quality={80}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#66B2B2]/80 to-[#4682B4]/80 group-hover:from-[#4682B4]/80 group-hover:to-[#66B2B2]/80 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
@@ -207,7 +214,9 @@ export default function Home() {
                   alt="Ağır Yük Taşımacılığı - ÇNR Lojistik"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  loading="lazy"
+                  quality={80}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FFA07A]/80 to-[#CD7F32]/80 group-hover:from-[#CD7F32]/80 group-hover:to-[#FFA07A]/80 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
@@ -472,7 +481,9 @@ export default function Home() {
                   alt="ÇNR Lojistik Şirket Görseli - Profesyonel Lojistik Hizmetleri"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  loading="lazy"
+                  quality={80}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1200px) 50vw, 600px"
                 />
               </div>
             </div>

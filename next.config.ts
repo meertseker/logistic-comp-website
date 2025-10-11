@@ -1,29 +1,48 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // React Strict Mode
+  reactStrictMode: true,
+  
+  // Build optimizations
   eslint: {
-    // Enforce ESLint errors to fail production builds
     ignoreDuringBuilds: false,
   },
   typescript: {
-    // Enforce TypeScript errors to fail production builds
     ignoreBuildErrors: false,
   },
-  images: {
-    domains: ['www.cnrlojistikvedepolama.com'],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
-    dangerouslyAllowSVG: false,
-  },
+  
+  // Production optimizations
+  productionBrowserSourceMaps: false,
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
+  
+  // SWC Minification
+  swcMinify: true,
+  
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  
+  // Image optimization
+  images: {
+    domains: ['www.cnrlojistikvedepolama.com'],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year (increased from 30 days)
+    dangerouslyAllowSVG: false,
+    unoptimized: false,
+  },
+  
   // Performance optimizations
   experimental: {
-    // optimizeCss: true, // Disabled due to critters module issue
-    optimizePackageImports: ['@next/font', 'next/image'],
+    optimizeCss: true,
+    optimizePackageImports: ['@next/font', 'next/image', 'react'],
   },
   // Bundle analyzer (uncomment to analyze bundle)
   // webpack: (config, { isServer }) => {
@@ -70,6 +89,26 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // Image caching
+      {
+        source: '/_next/image(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // Public images
+      {
+        source: '/IMG-(.*)',
         headers: [
           {
             key: 'Cache-Control',
