@@ -15,31 +15,31 @@ export const metadata: Metadata = {
 
 const teamMembers = [
   {
-    name: "Ahmet Yılmaz",
+    name: "Ahmet Karderim",
     position: "Genel Müdür",
     experience: "20 yıl",
-    image: "/team/ahmet-yilmaz.jpg",
+    image: "/team/ahmet-karderim.jpg",
     description: "Lojistik sektöründe 20 yıllık deneyime sahip. Uluslararası taşımacılık konusunda uzman."
   },
   {
-    name: "Fatma Demir",
+    name: "Berzan Elmas",
     position: "Operasyon Müdürü",
     experience: "15 yıl",
-    image: "/team/fatma-demir.jpg",
+    image: "/team/berzan-elmas.jpg",
     description: "Operasyon yönetimi ve proje koordinasyonu konusunda uzman. 15 yıllık sektör deneyimi."
   },
   {
-    name: "Mehmet Kaya",
+    name: "Serap Özkan",
     position: "Gümrük Müdürü",
     experience: "18 yıl",
-    image: "/team/mehmet-kaya.jpg",
+    image: "/team/serap-ozkan.jpg",
     description: "Gümrük işlemleri ve mevzuat konusunda uzman. Uluslararası ticaret hukuku alanında deneyimli."
   },
   {
-    name: "Ayşe Özkan",
+    name: "Furkan Karderim",
     position: "Müşteri İlişkileri Müdürü",
     experience: "12 yıl",
-    image: "/team/ayse-ozkan.jpg",
+    image: "/team/furkan-karderim.jpg",
     description: "Müşteri memnuniyeti ve hizmet kalitesi konusunda uzman. 12 yıllık müşteri deneyimi."
   }
 ];
@@ -256,11 +256,8 @@ export default function HakkimizdaPage() {
                 <h3 className="text-xl font-semibold text-[#202953] mb-2">
                   {member.name}
                 </h3>
-                <p className="text-[#202953] font-medium mb-2">
+                <p className="text-[#202953] font-medium mb-4">
                   {member.position}
-                </p>
-                <p className="text-sm text-gray-500 mb-4">
-                  {member.experience} deneyim
                 </p>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {member.description}
