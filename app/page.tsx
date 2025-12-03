@@ -561,7 +561,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0E0E0E] text-white py-20 px-4 lg:px-20">
+      <footer className="bg-[#202953] text-white py-20 px-4 lg:px-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-4 gap-8">
             <div className="lg:col-span-2">
